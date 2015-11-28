@@ -2,11 +2,36 @@
 <html>
   <head>
     <title>LCARS UI</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link type="text/css" rel="stylesheet" href="css/lcars.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="js/lcars.js"></script>
   </head>
   <body>
+    <nav class="lcars-nav top">
+      <ul class="lcars-nav-menu">
+        <li class="lcars-nav-item lcars-left system">
+          <a href="#">Bridge</a>
+        </li>
+        <li class="lcars-nav-item">
+          <a href="#">Engineering</a>
+        </li>
+        <li class="lcars-nav-item info dropdown">
+          <a href="#">Scan <span class="fa fa-caret-down"></span></span></a>
+          <ul class="lcars-dropdown">
+            <li class="lcars-dropdown-item">
+              <a href="#">Life Signs</a>
+            </li>
+            <li class="lcars-dropdown-item">
+              <a href="#">Neutrinos</a>
+            </li>
+            <li class="lcars-dropdown-item">
+              <a href="#">Tachyon</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
     <div class="lcars-container closed">
       <h1 class="lcars">Engineering</h1>
       <button class="lcars lcars-left system">System</button>
@@ -18,31 +43,72 @@
       <p>
         Here is some text. I'm hoping to make this clearly legible.
       </p>
+      <h3>The Prime Directive</h3>
       <p class="system">
-        Bacon ipsum dolor amet t-bone meatball corned beef biltong, ball tip jerky pork belly ham hock pork chop flank pig pork bacon beef jowl. Rump jowl sirloin spare ribs brisket ground round flank corned beef turducken short loin pastrami. Chicken andouille
-        short ribs fatback pig tongue cupim doner. T-bone kevin ball tip bresaola pork chop biltong tail brisket.
+        No identification of self or mission; no interference with the social development of said planet; no references to space, other worlds, or advanced civilizations.
       </p>
-      <blockquote class="alert">
+      <blockquote>
         Someone once told me that time was a predator that stalked us all our lives. But I rather believe than time is a companion who goes with us on the journey, and reminds us to cherish every moment because they'll never come again. What we leave behind is
         not as important how we lived. After all, Number One, we're only mortal.
       </blockquote>
+      <ul>
+        <li>
+          This
+        </li>
+        <li>
+          Is
+        </li>
+        <li>
+          A
+        </li>
+        <li>
+          List
+        </li>
+      </ul>
+      <div class="lcars-accordion closed">
+        <h2 class="lcars-accordion-heading info">The Picard Maneuver</h2>
+        <div class="lcars-accordion-content">
+          <p class="info">
+            The Picard Maneuver was a battle tactic invented by Starfleet Captain Jean-Luc Picard. In 2355, Picard was in command of the USS Stargazer when it was attacked by an unknown alien vessel, later determined to be of Ferengi origin. The subsequent engagement and destruction of the Ferengi ship was sometimes called the Battle of Maxia by some Ferengi.
+          </p>
+        </div>
+      </div>
       <input type="text" placeholder="Text input" />
-      <label for="cb-demo">
+      <label for="cb-demo" class="lcars-form-label">
         Check
         <input type="checkbox" id="cb-demo" />
       </label>
-      <div class="lcars-container radio-group">
-        <label for="radio-demo-1" class="system">
+      <input type="range" id="range-slider"/>
+      <label for="select-demo" class="lcars-select-label">
+        <select name="select-demo">
+          <option>
+            Constitution
+          </option>
+            Excelsior
+          </option>
+          <option>
+            Ambassador
+          </option>
+          <option>
+            Galaxy
+          </option>
+          <option>
+            Sovereign
+          </option>
+        </select>
+      </label>
+      <div class="lcars-container lcars-radio-group">
+        <label for="radio-demo-1" class="system lcars-form-label">
           Radio
-          <input type="radio" name="rd" id="radio-demo-1" />
+          <input type="radio" name="rd" id="radio-demo-1" value="1"/>
         </label>
-        <label for="radio-demo-2" class="info">
+        <label for="radio-demo-2" class="info lcars-form-label">
           Radio
-          <input type="radio" name="rd" id="radio-demo-2" />
+          <input type="radio" name="rd" id="radio-demo-2" value="2"/>
         </label>
-        <label for="radio-demo-3" class="alert">
+        <label for="radio-demo-3" class="alert lcars-form-label">
           Radio
-          <input type="radio" name="rd" id="radio-demo-3" />
+          <input type="radio" name="rd" id="radio-demo-3" value="3"/>
         </label>
       </div>
     </div>
