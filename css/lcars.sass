@@ -1,0 +1,124 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald|Roboto)
+$contexts: system #C3A94B, alert #B4463C, info #2F7B8E, confirm #37A456
+$bg-color: black
+$text-color: white
+$font-size: 16px
+$default-color: #5E5BC8
+$alert-color: #B4463C
+$system-color: #C3A94B
+$confirm-color: #37A456
+$lighten-amount: 10%
+$button-default-radius: 5px
+$button-end-radius: 25px
+$elbow-radius: $button-end-radius + 20px
+$button-sides: left right
+
+@mixin contexts
+  @each $type in $contexts
+    $type-name: nth($type,1)
+    $color: nth($type,2)
+    &.#{$type-name}
+      background-color: $color
+      &:hover
+        background-color: lighten($color,$lighten-amount)
+
+body
+  background-color: $bg-color
+  color: $text-color
+  font-family: Roboto,Arial,sans-serif
+  font-size: $font-size
+div
+  &.lcars-container
+    display: flex
+    border-top: 20px solid $default-color
+    border-bottom: 20px solid $default-color
+    border-left: 30px solid $default-color
+    border-top-left-radius: $elbow-radius
+    border-bottom-left-radius: $elbow-radius
+    padding: 10px 10px 15px 15px
+    display: inline-block
+    &.closed
+      border-right: 20px solid $default-color
+      border-top-right-radius: $elbow-radius
+      border-bottom-right-radius: $elbow-radius
+
+h1,h2
+  color: white
+  background-color: black
+  font-family: Oswald, sans-serif
+  padding: 3px
+  margin: 3px 0
+  text-align: left
+  border-bottom: 3px solid $default-color
+  @each $type in $contexts
+    $context: nth($type,1)
+    $color: nth($type,2)
+    &.#{$context}
+      border-bottom: 3px solid $color
+
+p
+  border-left: 2px solid $default-color
+  padding: 3px 3px 3px 5px
+  @each $type in $contexts
+    $context: nth($type,1)
+    $color: nth($type,2)
+    &.#{$context}
+      border-left: 2px solid $color
+button
+  font-family: Oswald,sans-serif
+  font-size: 1.2em
+  background-color: $default-color
+  margin: 3px
+  padding: 10px 20px
+  border-radius: $button-default-radius
+  border: none
+  &:hover
+    background-color: lighten($default-color, 10%)
+  @each $side in $button-sides
+    &.lcars-#{$side}
+      border-bottom-#{$side}-radius: $button-end-radius
+      border-top-#{$side}-radius: $button-end-radius
+  +contexts
+
+blockquote
+  &:before
+    content: '\"'
+  &:after
+    content: '\"'
+  font-style: italic
+  font-size: 1.1em
+  margin-left: 15px
+  padding: 10px
+  border: 2px solid
+  border-radius: 5px
+  @each $context in $contexts
+    $type: nth($context,1)
+    $color: nth($context,2)
+    &.#{$type}
+      border-color: $color
+
+input
+  background-color: $bg-color
+  color: $text-color
+  font-family: Roboto, sans-serif
+  font-size: 1em
+  border: 2px solid $default-color
+  border-radius: 5px
+  padding: 10px 20px
+
+label
+  @extend button
+  color: black
+  & input
+    display: none
+  &.checked
+    color: $text-color
+
+svg.lcars
+  width: 10px
+  height: $font-size
+  & rect.lcars-select
+    width: 100%
+    height: 100%
+    fill: rgb(0,0,0)
+ 

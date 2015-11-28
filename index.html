@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LCARS UI</title>
+    <link type="text/css" rel="stylesheet" href="css/lcars.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/lcars.js"></script>
+  </head>
+  <body>
+    <div class="lcars-container closed">
+      <h1 class="lcars">Engineering</h1>
+      <button class="lcars lcars-left system">System</button>
+      <button class="lcars">Menu</button>
+      <button class="lcars confirm">Confirm</button>
+      <button class="lcars info">Info</button>
+      <button class="lcars lcars-right alert">Alert</button>
+      <h2 class="system">A section header</h2>
+      <p>
+        Here is some text. I'm hoping to make this clearly legible.
+      </p>
+      <p class="system">
+        Bacon ipsum dolor amet t-bone meatball corned beef biltong, ball tip jerky pork belly ham hock pork chop flank pig pork bacon beef jowl. Rump jowl sirloin spare ribs brisket ground round flank corned beef turducken short loin pastrami. Chicken andouille
+        short ribs fatback pig tongue cupim doner. T-bone kevin ball tip bresaola pork chop biltong tail brisket.
+      </p>
+      <blockquote class="alert">
+        Someone once told me that time was a predator that stalked us all our lives. But I rather believe than time is a companion who goes with us on the journey, and reminds us to cherish every moment because they'll never come again. What we leave behind is
+        not as important how we lived. After all, Number One, we're only mortal.
+      </blockquote>
+      <input type="text" placeholder="Text input" />
+      <label for="cb-demo">
+        Check
+        <input type="checkbox" id="cb-demo" />
+      </label>
+      <div class="lcars-container radio-group">
+        <label for="radio-demo-1" class="system">
+          Radio
+          <input type="radio" name="rd" id="radio-demo-1" />
+        </label>
+        <label for="radio-demo-2" class="info">
+          Radio
+          <input type="radio" name="rd" id="radio-demo-2" />
+        </label>
+        <label for="radio-demo-3" class="alert">
+          Radio
+          <input type="radio" name="rd" id="radio-demo-3" />
+        </label>
+      </div>
+    </div>
+  </body>
+</html>
