@@ -12,6 +12,7 @@ Works best when used over a framework such as [Bootstrap](https://getbootstrap.c
 ## Requirements
 Uses the following:
 * jQuery
+* Google Web Fonts
 * FontAwesome
 
 ## Getting Started
@@ -19,6 +20,7 @@ Examples for use are in the `index.html` file. As in that file, link up the JS a
 
     <link type="text/css" rel="stylesheet" href="css/lcars.min.css"/>
     <script src="js/lcars.js"></script>
+
 
 ## Extending/Modifying
 The styles are written in Sass, so go nuts modifying the defaults if you like.
