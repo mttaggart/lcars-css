@@ -25,19 +25,19 @@ $button-sides: left right
         background-color: lighten($color,$lighten-amount)
 
 @mixin button-styles
-    font-family: Oswald,sans-serif
-    font-size: 1.2em
-    background-color: $default-color
-    margin: 3px
-    padding: 10px 20px
-    border-radius: $button-default-radius
-    border: none
-    &:hover
-      background-color: lighten($default-color, 10%)
-    @each $side in $button-sides
-      &.lcars-#{$side}
-        border-bottom-#{$side}-radius: $button-end-radius
-        border-top-#{$side}-radius: $button-end-radius
+  font-family: Oswald,sans-serif
+  font-size: 1.2em
+  background-color: $default-color
+  margin: 3px
+  padding: 10px 20px
+  border-radius: $button-default-radius
+  border: none
+  &:hover
+    background-color: lighten($default-color, 10%)
+  @each $side in $button-sides
+    &.lcars-#{$side}
+      border-bottom-#{$side}-radius: $button-end-radius
+      border-top-#{$side}-radius: $button-end-radius
 
 body
   background-color: $bg-color
